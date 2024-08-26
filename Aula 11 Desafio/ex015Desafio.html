@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual o País de Origem</title>
+    <style>
+        body{    
+            font: normal 20pt Arial;
+            background: cornsilk;
+            width: 300px;
+            height: 500px;
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titleBody">QUAL O SEU PAÍS</h1>
+    <p id="subBody">Digite seu país para saber se é Brasileiro(a) ou Estrangeiro(a)</p>
+        <input type="text" name="textInp" id="textInp">
+        <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+<script>
+
+function verificar(){
+    var text = document.getElementById('textInp')
+    var res = document.getElementById('res')
+    res.innerHTML = ''
+    res.innerHTML += `<p>Que legal, o seu país de origem é <strong>${text.value}</strong></p>`
+
+    if(text.value === 'Brasil'){ 
+        res.innerHTML += `<p>Muito legal, você está em casa!</p>`
+    }else{
+        res.innerHTML += `<p>Você é estrangeiro por aqui, mas não é um problemas!</p>`
+    }
+    
+ }
+
+
+</script>
+</body>
+</html>

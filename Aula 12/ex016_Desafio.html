@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teras</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Descobrindo se a combinação de <strong>TERAS</strong> é boa</h1>
+    <input type="text" name="text1" id="text1"> +
+    <input type="text" name="text2" id="text2">
+    <input type="button" value="Combinar" onclick="buttonVeri()">
+    <div id="res"></div>
+    
+    <script>
+        
+
+    function buttonVeri(){
+        var teras = document.getElementById('text1')
+        var teras1 = document.getElementById('text2')
+        var res =''
+        var res = document.getElementById('res')
+        
+        if(teras = 'agua'){
+            res.innerHTML = `<p>Essa combinação de <strong>${teras}</strong> com <strong>${teras}</strong> é boa padrão</p>`
+        }
+        if(teras1 = 'gelo'){
+            res.innerHTML = `<p>Essa combinação <strong>${teras}</strong> com <strong>${teras1}</strong> é muito melhor</p>`
+        }else{
+            res.innerHTML += '<p>Esse não vai ficar bom</p>'
+        }
+    }
+
+    </script>
+</body>
+</html>
